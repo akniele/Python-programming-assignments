@@ -1,17 +1,23 @@
-# Ranked retrieval system for United Nations document
+# Swedish anagrams
 
 ## Program description
-This program allows users to pass in a search query consisting of multiple words. It then returns the document IDs of the top five UN documents that best match the search query.
-
-For instance, the user could input the query *health insurance*, one word at a time. When using cosine similarity as the similarity metric (users get to choose between this and a non-normalized metric), the following documents are retrieved by the system:
-
-*docs46.txt*, *docs15.txt*, *docs32.txt*, *docs48.txt*, *docs27.txt*
-
-These are the five documents that best match the user's query. 
+This programs finds anagrams for a word specified by the user. 
+NB: The dictionary used in this program is in Swedish, so you will only get anagrams for Swedish words.
 
 
 ## How to run the program
-First, the file *divide_file.py* should be used to divide *doc1* (the first United Nations file) into fifty smaller files before running *retrieval.py*. When the file *retrieval.py* is then run,*main* is called automatically and will continue to call itself until the user answers 'no' ('n') when asked whether they would like to do another search. 
+There are two versions of the program:
 
+For *anagram_1.py*, just run the program. Once it is running, you will be prompted to enter
+a word. Once you have entered a word, the system will output anagrams of this word.
+
+*anagram_2.py* is supposed to be run directly from the terminal (it uses sys.argv). Just pass the word you want anagrams for as an argument when calling the program.
+
+Example: 
+1. Open your computer's terminal.
+2. Navigate to the folder that contains the python file (*anagram_2.py*), the bubble sort file (*bubble_sort.py*), and the dictionary file(*sv-utf8.txt*).
+3. At the prompt, type in the following command (using whichever word you want anagrams for): 
+
+\>\>\> python anagram_2.py "XXXX"
 
 
